@@ -1,0 +1,28 @@
+import math
+def s(n):
+  q=[n]
+  p=[]
+  while(q):
+    print q
+    v=q[0]
+    del(q[0])
+    for i in xrange(2,int(n/2)):
+      if(v%i==0):
+        if(isPrime(i)):
+          p.append(i)
+        else:
+          q.append(i)
+        if(isPrime(v/i)):
+          p.append(v/i)
+        else:
+          q.append(v/i)
+        break
+  return p
+
+def isPrime(n):
+  for i in xrange(2,int(n/2)):
+    if (n%i==0 and n!=i):
+      return False
+  return True
+
+print s(360)
