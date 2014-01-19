@@ -6,5 +6,5 @@ def dfs(G,s,seen):
             dfs(G,edge,seen)
     return seen
 seen=[1]
-print dfs(Graph,1,seen)
+print (dfs(Graph,1,seen))
                 
